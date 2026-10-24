@@ -30,8 +30,11 @@ const subjectsSlice = createSlice({
       subject.total += 1;
       if (present) subject.attended += 1;
     },
+    deleteSubject(state,action){
+         state.list=state.list.filter((subject)=>subject.id !==action.payload);
+    },
   },
 });
 
-export const { addSubject, markAttendance } = subjectsSlice.actions;
+export const { addSubject, markAttendance , deleteSubject } = subjectsSlice.actions;
 export default subjectsSlice.reducer;
