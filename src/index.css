@@ -46,6 +46,10 @@ body.dark {
   color: #000000;
 }
 
+.green  { color: #2e9e4f; }
+.orange { color: #e08a00; }
+.red    { color: #d63a3a; }
+
 .app { max-width: 960px; margin: 0 auto; padding: 24px 16px 48px; }
 
 .navbar {
