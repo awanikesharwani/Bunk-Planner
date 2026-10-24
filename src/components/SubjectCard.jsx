@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { markAttendance } from '../store/subjectsSlice';
+import { markAttendance ,deleteSubject } from '../store/subjectsSlice';
 import { getPercentage } from '../utils/getPercentage';
 import { calculateBunks, classesToRecover } from '../utils/calculateBunks';
 
@@ -11,11 +11,12 @@ function SubjectCard({ subject }) {
   const bunks = calculateBunks(attended, total);
   const needed = classesToRecover(attended, total);
 
+
   return (
     <article className="card">
       <div className="card-header">
         <h3>{name}</h3>
-        <button className="delete-btn" title="Delete subject">
+        <button className="delete-btn" title="Delete subject" onClick={()=> dispatch(deleteSubject(id))}>
           🗑️
         </button>
       </div>
