@@ -5,6 +5,9 @@ import { addSubject } from '../store/subjectsSlice';
 function AddSubjectForm() {
   const [name, setName] = useState('');
   const dispatch = useDispatch();
+  console.log("====================================")
+  console.log(name)
+  console.log("====================================")
 
   const handleSubmit = (e) => {
     e.preventDefault();
