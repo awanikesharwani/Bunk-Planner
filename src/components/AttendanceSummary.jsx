@@ -1,4 +1,7 @@
 import { useSelector } from 'react-redux';
+import { getStatusColor } from '../utils/getStatusColor';
+
+
 import { getPercentage } from '../utils/getPercentage';
 
 function AttendanceSummary() {
@@ -11,11 +14,15 @@ function AttendanceSummary() {
   return (
     <section className="summary">
       <div>
-        <span className="summary-number">{list.length}</span>
+        <span className="summary-number"> 
+          {list.length}
+          </span>
         <span className="summary-label">subjects</span>
       </div>
       <div>
-        <span className="summary-number">{overall.toFixed(1)}%</span>
+        <span className={`summary-number ${getStatusColor(overall)}`}>
+  {overall.toFixed(1)}%
+</span>
         <span className="summary-label">overall attendance</span>
       </div>
     </section>
