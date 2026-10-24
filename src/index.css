@@ -36,6 +36,15 @@ body {
   color: var(--text);
   transition: background 0.2s, color 0.2s;
 }
+body {
+  background: #fff;
+  color: #111;
+}
+
+body.dark {
+  background: #121212;
+  color: #000000;
+}
 
 .app { max-width: 960px; margin: 0 auto; padding: 24px 16px 48px; }
 
